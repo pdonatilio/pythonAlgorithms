@@ -1,5 +1,6 @@
 # Cycle Graph Example
 
+
 class CycleGraph:
 
     def __init__(self, V):
@@ -9,10 +10,11 @@ class CycleGraph:
     def add_edge(self, orgin, destiny):
         self.adjacency_matrix[orgin].append(destiny)
 
+    # Depth First Search
     def dfs(self, v):
         stack = []
-        stackRecord = [False for i in range(self.V)]
-        visited = [False for i in range(self.V)]
+        stackRecord = [False for i in range(self.V)] # array to save the node's neighbors 
+        visited = [False for i in range(self.V)] # array to check the node visited
 
         while True:
             find_neighbor = False
